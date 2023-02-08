@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- TODO: BUNU COK IYI ANLAMAN ICIN TEKRAR YAP BU ARADA PARENT VE CHILDREN AYNI TURDENDIR  -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+
+    .box1 .child1{
+      box-sizing: content-box;
+      height: 200px;
+      width:300px;
+      border: 2px solid red;
+      margin-bottom:5px;
+      text-align: center;
+    }
+    .box ,.child2{
+      box-sizing: border-box;
+      height: 200px;
+      width:300px;
+      border: 2px solid red;
+
+      
+    }
+   
+
+
+    .child1, .child2{
+      background-image:url("300_year_old_tree_197383.webp");
+      /* background-position: center; */
+      background-size: cover;
+      
+      background-repeat: no-repeat;
+      
+      color:red;
+      font-size: xx-large;
+      border: 5px solid black;
+
+
+    }
+
+
+
+  </style>
+<!-- when we add padding or border to something has a content box its gonna adding size to that component  it always will be additive 
+but in border box the content width and height adjusted based on how much border  and padding ther is   -->
+</head>
+<body>
+
+  
+
+  <p>boxModel variation</p>
+    <pre>
+it's so important when we start making grid and making element in other elements  its gonaa be very important to know how much width we need to give to childeren element  to fit with the parent container and so over  
+  so when flip box sizing from content to border it's basically  takes teh calculation of the space  that  html is occupying and it changes  it so now instead  of taking h,p,b  to get out total height  we just look at hight property and that is our total height
+
+
+  the box type default value is content box 
+  but we will see  border box 
+  the contentBox: we have to add the  content  width and height to the padding  in  the border 
+well with the 
+borderBox 
+      </pre>
+
+
+      <button   onclick="togglePadding1()"> toglle padding 1</button>
+      <button   onclick="togglePadding2()"> toglle padding 2 </button>
+
+      <div class="box1">
+      <div class="child1" id="icele1"> child contentBox</div>
+
+      </div>
+      <div class="box2">
+      <div class="child2" id="icele2"> child Border box
+      </div>
+
+
+      </div>
+      <script>
+        function togglePadding2(){
+          document.getElementById('icele2').style.padding='20px';
+        }
+    
+        function togglePadding1(){
+          document.getElementById('icele1').style.padding='20px';
+        }
+       
+       
+      </script>
+</body>
+</html>

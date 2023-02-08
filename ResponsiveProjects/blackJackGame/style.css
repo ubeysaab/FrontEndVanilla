@@ -1,0 +1,45 @@
+.container{
+    background-color: rgba(12,200,0,0.6);
+}
+
+
+.cards
+{
+    border: 1px solid #545135;
+    padding: 2px;
+}
+.ici 
+{
+    border: 2px solid red ;
+    width: 250px;
+    height: 350px;
+    margin: 0 auto;
+    text-align: center;
+}
+.ici p
+{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: italic;
+}
+.ici h1
+{
+    /* font-style: italic; */
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   
+}
+.btns
+{
+    border: 1px solid #880;
+    padding: 5px;
+    margin: 6px;
+    width: 200px;
+}
+.buttonlar
+{
+    border: 1px solid red;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

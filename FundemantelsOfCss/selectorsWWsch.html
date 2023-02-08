@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <!--
+      initial key word is used to set a css property to its default value
+      inherit : keyword specifiies that a property should inherit its value form its parent elemen 
+      -->
+    <style>
+      .center {
+        background: rgba( 0, 129 ,0 ,0.1);
+      
+      }
+      .miggle{
+        background: rgba( 0, 129 ,0 );
+        
+        opacity: 0.1;
+      }
+      h1{
+        background-color: aquamarine;
+        border: 5px  solid red 
+        
+
+
+      }
+      /* When using the opacity property
+       to add transparency to the background
+        of an element, all of its child
+         elements 
+       inherit the same transparency.
+        This can make the text inside a fully
+       transparent element hard to read.*/
+      p::first-letter{
+        font-size:xxx-large;
+        font-family:rale ;
+
+
+      }
+    </style>
+  </head>
+  <body>
+    <h1>result with rgba</h1>
+     <p class="center"> how are you bitch </p>
+<br>
+<h1>result with opacity</h1>
+     <p class="miggle"> are you just call  me bitch you little whore </p>
+     <h2 style="color: red;"> Notice how the text gets transparent as well as the background color when using the opacity property.</h2>
+     <h1 class="center"> how am I ?? I think i'm fine this days </h1>
+
+      <p>There is background clip attribute in CSS </p>
+     <ul style="list-style-type:cycle;">
+
+      <li>
+        <p>border-box : The background extends behind the border </p>
+      </li>
+      <li>
+        padding-box : The background extends to the insider edge of the border
+      </li>
+      <li>
+        content-box : The background extens to the edge of the content box
+      </li>
+      <ul>
+        that's not in background-clip but its background-size attribute :
+          <li>
+             auto : Default value . the background image is displayed in its original size
+          </li>
+          <li>
+            length : 	Sets the width and height of the background image. The first value sets the width, the second value sets the height. If only one value is given, the second is set to "auto"
+          </li>
+          <li>
+            cover : Resize the background image to cover the entire container , even if it has to stretch the image or cut a little bit off one of the edges
+          </li>
+          <li>
+            contain : Resize the background image to make sure the image is fully visible
+          </li>
+         
+      </ul>
+
+     </ul>
+     <h1> border from style 
+     </h1>
+
+     <p style="border: outset; background-color: rgba( 0, 129 ,0 );"> if we think that you better than me so keep dreaming </p>
+     <p style="border-width:1px 2px 1px 5px ; border-color: aqua aqua  aqua  blue; background-color: rgb(125, 243, 243); border-style: solid;"> Hello my friend</p>
+  </body>
+</html>

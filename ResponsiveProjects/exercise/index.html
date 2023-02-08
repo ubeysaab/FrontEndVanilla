@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+<!-- when the user click the purchase button , render out  "some thing went wrong please try again "  -->
+    <div class="container">
+        <div class="imageCont">
+            <img src="https://via.placeholder.com/150"" alt="Shoe">
+        </div>
+        <div class="textC">
+            <p>Nike shoe</p>
+
+            <button id="purchaseBtn" onclick="clicked()"> purchase - $149</button>
+            <!-- ! web sayfalarind  error olmasi durumunda uyari mesaji vermek icin bazen bos Paragraph tagi birakilabilir   -->
+            <p id="error"></p>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

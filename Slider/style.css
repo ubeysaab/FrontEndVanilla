@@ -1,0 +1,66 @@
+.container{
+  
+  padding:2rem;
+  border: 1px solid red;
+}
+
+
+.slider-wrapper{
+  position: relative;
+  border: 1px solid red;
+  /* padding:19px; */
+  max-width:48rem;/*force the slider  the slider to take that much space if available and dynamically  resize for smaller screens  */
+  margin :0 auto ;
+
+}
+
+.slider{
+  display: flex;
+  /* border: 1px solid rgb(111, 0, 255); */
+  aspect-ratio: 16/9;/* property sets a preferred aspect ratio for the box, which will be used in the calculation of auto sizes and some other layout functions    // horizontal/vertical            its some how equal to padding top   .*/
+  /* ! in order to hide the img  that over flowing out side the cotainer  */
+  overflow: hidden;
+  /*! by default  the imgs that over flow has a scroll bar that alow user  to  view the rest of the imgs by scrolling*/
+
+
+/* ! we can change the behavior of the scroll bar  in order to get effect we want  with images slider by setting  */
+scroll-snap-type: x mandatory ;/*@  x mean  snap along the x-axis  and the medatory value is a strictness value taht forces the behavior to  always snap to the next snap position which creat a slide effect we want   however this snap effect won't be visible   until we add the scroll snap  align value */
+scroll-behavior: smooth;
+box-shadow: 0 1.5rem  3rem  -0.75rem   rgba(0,0,0 ,0.25);
+border-radius: 0.5rem;
+
+
+
+
+
+}
+.slider img{
+  flex-basis: 100%;/*Every img will have an initial size of 100%  meaning it's will take a intire parent container*/
+  flex-grow: 1;/*every image will set to an equal size inside the   container */
+  flex-shrink: 0;/* every image will retain the width it need and not wrap its content */  
+  scroll-snap-align: start;/*now the image will snap or stop at the start of the img element  in the parent container */
+  /* ! to fix distorted images  set t the  */
+  object-fit: cover;/*which make the imgs fill the heigth and width of its parent container  while  maintaining the original aspect ration of the image  | keep in mind that this will typically lead to some of the image to being crapped out */
+}  
+
+.nav{
+  display: flex; 
+  column-gap: 0.1rem;/*giving  each sibling inside the nav one rem of spacing  between one and anoother*/
+
+  position: absolute;/* to set position of the nav*/
+  left:50%;
+  bottom:1.20rem;
+  transform: translate(-50% );/* which will move teh nav to the left  by half of its width  will which automatically center it */
+  z-index: 1;
+}
+.nav a{
+  border-bottom: 2px;
+  width: 40px;
+  height: 4px;
+  border-radius: 50%;/*to make it circle */
+  color:rgba(161, 18, 18, 0.658);
+  opacity:0.75;/* to little of the images come through*/
+  
+  transition: opacity ease 250ms;/*set transition prop to target opacity prop then animation timing function to ease then set the animation to 250ms*/
+  /* @ this transition prop will play an important part in the next style  because we will change the opacity when   a user hover over the buttons without this prop the button would instantly change the opacity  but now it will have a smooth animation effect that will look a lot */
+}

@@ -1,0 +1,26 @@
+body{
+    background-color: aliceblue;
+
+}
+.container{
+    width: 150px;
+    height: 100px;
+    margin :auto auto ;
+
+}
+.imageCont 
+{
+    width: auto;
+    height: auto;
+
+}
+.imageCont img{
+    width: 100%;
+    display: block;
+    height: 100%;
+}
+#purchaseBtn{
+    border: 1px solid  rgba(0, 0,0, 0.4);
+    padding: 4px 8px ;
+    border-radius: 12px;
+}

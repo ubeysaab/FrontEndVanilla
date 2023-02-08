@@ -1,0 +1,37 @@
+html{
+  box-sizing: border-box;
+}
+*,*::after,*::before{
+  box-sizing: inherit;
+}
+
+
+
+.parent{
+  display:flex;
+/* flex container hold buch of flex items  the container and the items have specific  characteristic that  normal block or inline elements donot have 
+ */
+}
+
+
+.item{
+  width: 100px;
+  height: 100px;
+  background-color: orange;
+  margin: 5px;
+  
+}
+.subitem{
+  width: 10px;
+  height: 10px;
+  background-color: rgb(98, 0, 255);
+  margin: 5px;
+}
+.item3
+{
+  width: 100px;
+  height: 100px;
+  background-color: orange;
+  margin: 5px;
+  display: flex;
+}

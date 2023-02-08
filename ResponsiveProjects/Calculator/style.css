@@ -1,0 +1,38 @@
+.container{
+    width: 180px;
+    height: 150px;
+    margin: auto;
+    border: 1px solid black ;
+    position: relative;
+    
+}
+.top{
+    margin-top: 40px;
+}
+.topFlex{
+    display: flex;
+    flex-direction: row ;
+    justify-content: space-between;
+}
+.operations{
+    border: 2px solid rgba(0,0,0,0.3);
+    border-radius: 6px;
+    /* flex-shrink: 1; */
+}
+.bottom{
+    text-align: center;
+    margin-top: 20px;
+}
+.spans{
+    position: absolute;
+    /* display: inline-block; */
+    /* border: 1px solid red ; */
+    /* margin: 8px 5px; */
+    top:2px ;
+    right: 90px;
+    transform: translate(50%,0);
+}
+#mul{
+    display: block;
+    margin-left: 55px;
+}

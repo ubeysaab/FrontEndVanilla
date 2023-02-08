@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+<!-- TODO:  FIGURE OUT WHY AFTER REMOVING RELATIVE PROPERTIES FROM BOX1 ABSOLUTE BOX STILL OVER TEHRE AND DOESNT GO BEHIND THE NAVBAR ???-->
+  <style>
+    nav{
+      background-color: rgb(14, 14, 99);
+      height: 60px;
+      color : white ;
+      position:fixed;
+      z-index: 1;/* we use this to put it on the top of box1 which his position is relative */
+      top:0;
+      width: 100%; 
+      /* or it can be width :100vw  (vw : view width ) */
+ 
+    }
+    h4{
+      margin:0;
+      line-height: 60px;
+      padding-left:11px;
+      /* its a some trick that we already know the height of nav so we set line height equal to it  */
+    }
+    body{
+      margin:0;
+
+    }
+
+
+    /* ther if i give margin top nothing gonna be change because each box will give to its own7
+     container ??px margin   so we shoulg put all of the boxes in one container */
+    .box{
+      
+      background-color: green;
+      height: 200px;
+      width: 200px;
+      margin:20px
+
+    }
+
+
+
+    .boxes{
+     margin-top:80px
+    }
+
+/* when we change the position of our first box goes on top of out navBar    and that is the direct 
+result of setting thaat "Relativ" positioning on the element because what that does is  
+ its enable a new Css property calles Z-Index  which basically says okay we've got allthese 
+ lements  on the page  what is the z-index  three-dimensional rather than two-dimensional 
+  so which one set on top of another  and when you put relative position  or absolute positioning   
+  on an element  it now has the z index  so now what we have to do is define  waht need to 
+  be on the top of another
+    So we go to(come up ) the navBar and give it a z-index=1  to put it on top of  this  element box1 again */
+  /* but what relative positioning is really does it  as we saw we doesn't really change  the actual position of that box but
+    NOW WHAT WE CAN DO IS DEFINE (TOP, RIGHT, LEFT,BOTTOM )  properties on this  element and it will change its position  relative to it self */
+  /* relative is very useful especially when you have some stubborn elements in your html that you just need to get to move just
+   little bit  but you can't quite do it with normal  css properties 
+  !!FINALLY : if we set the position to relative  on a parent element  then we can set absolute  positioning on the element  with
+   in that parent element  so   """" continue below above absChild*/
+  
+      .rel{
+      position: relative;
+      
+    }   
+
+    /* what we'll see its by default it's gonna  sit  up there in the top left corner  of its parent and that's  because we haven't positioned it yet so let's give it a */
+    .absChildOfrel{
+      
+      width: 100%;
+      height: 20px;
+      top:90px;
+      
+      background-color: orange;
+
+      /* absolute position  and what is that going to do  is now we have (top , right , left, bottom ) offsets enabled on this 
+       specific element but instead  of  being an offset based  on the viewport 
+       (so with this fixed navBar  whatever we pass to thos properties  is gonna be in realtion to  the edges of viewport  ) 
+
+       now we're gonna seting  these offsets based on the position of the  next  highest  element that has relative or  absolute positioning
+        there's nothing above it that has those positionings  then it's gonna use the html  element or the rooot element so  in this case 
+        */
+        /*   we have  thing is relatively positione as the direct parent  which is box1   
+        so that's what teh absolut poeitioning does and it has to be  used in realation with that  realtive  positioning  
+        if we don't have an a parent element that is relatively positioned  it will completely disappears 
+        we should asking now where is probably go ? probably the answer is behind the navBar   */
+      position: absolute;
+      
+    }
+  </style>
+
+
+
+
+
+</head>
+<body>
+  <nav>
+    <h4>this is the navbar </h4>
+  </nav>
+  <!-- when we scroll down after adding the boxes we will not be able to see the navBar any more  and the navBar as we used up on all webSite itshould to stay up and the way that we do that  is by using the  position property  -->
+  <!-- !after adding position :fixed property  alot of things that we didn't expect  and it gonna look a little bit intimidating for a second  untile we fugure out exactly waht's going on   -->
+  <!-- ! when we  put it to fixed it actually  takes that element  out of the flow  of the html doc  (we have a block elements and inline elements and if we change those it kinda breaks  them out of the flow of the content   ) -->
+  
+  
+ <!--  !  the last thing about the posittion fixed   that you have to specify  the offset that you have to its parent  container  -->
+  <!--!  as we scroll down our nabar  stays at the top  and it's  considerer fixed positioning  the last thing what we probably want to do is :   the main content has now spilled under  the fixed navbar and the reason  is because this fixed navBar doesn't take up  any space   (occupies zero spac whatsoever   ) to make sure that the maincontent is below it at all times we have to give a margin on the top  of this maincontent the margin should be a little more than  navBar height -->
+ 
+ <!--#slight correction - inline elements still take up space on the page 
+   fixed element don't  they visibly take up space, but not from the perspective of other elements on the page  -->
+ 
+ 
+ 
+ 
+ 
+<div class="boxes">
+   
+ <div class="box rel">
+  <div class="absChildOfrel"></div>
+ </div>
+ <div class="box abs"></div>
+ <div class="box"></div>
+ <div class="box"></div>
+ <div class="box"></div>
+ <div class="box"></div>
+</div>
+</body>
+</html>

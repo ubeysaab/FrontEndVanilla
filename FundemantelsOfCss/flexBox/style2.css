@@ -1,0 +1,61 @@
+:root
+{
+    box-sizing: border-box;
+}
+*,*::after,*::before{
+    box-sizing: inherit;
+}
+
+
+
+
+.container{
+    width: 417px;
+    height: 213px;
+    display: flex;
+    border: 4px solid black;
+    flex-direction: row;/*! !!! Very important when we change our flexDirections our main and cross axis will be change (swap)*/
+    /* ! now after increases the count of items we will notice that these items is overflowing outside  of the  flex container 
+      @ in this situation we have to options the first option  is kinda standart of default way of handling  overflow in css  it doesn't specific to css it self  we can use  it with any css display type */
+    /* overflow: auto; */
+    /* @ but there we have to scroll  and we don't wanna scroll left and right to see al elements  we just wanna elemetns to wrap down to the next line  so instead  of using overflow property which is generic solution  we'll use  flex-wrap property */
+
+    /* flex-wrap: wrap; */
+    /* # after using this we'll notice that this element perfectly wrap  on to the  next line but now we see some of whiteSpace on the middle  and we Really don't wanna see them we wanna these element flush to each other  so   naturally what we gonna to do   */
+    align-items: flex-start;/* but it doesn't work  and the reason is the rules of the game has changes when we put in this flexWrap property */
+    /* *  IN CSS CERTAIN PROPERTIES  SET TO CERTAIN VALUES  CHANGED THE WHOLE GAME */
+    /* ! flexwrap property change how we align items on the cross axis  SO instead of align items  we now  have to use property called  align content 
+    ? Soooo if flexwrap is set  to any thing other than the default  which gonna be noWrap  then we're  gonna use instead of alignItems we gonna use align-Content */
+    
+    /* align-content: center; */
+    /* align-content: center; */
+/* that's how we wrap items to the next line if they overFlowing at this point we actually covered all of the flex container  properties that we can use    */
+justify-content: center;
+
+/* # at this point we'll  talking about sizing of flex items  what we're dealing with here flex grow shrink and  basis    */
+/* @ flex grow(when we have empty space)   that will be apply to flex items when   they don't naturally  fill the entire MAIN axis  so its gonna divide  the empty space /  total summation of flex-grow  */
+/* @ now the opposite applies when we have too many items in our flex container   */
+/* !     similar to how we allocate  out empty space  to flex items we can also  reduce the size  of flex items by  the  amount of overFlow that we have  */
+}
+.items{
+  
+    /* display: table-cell;  i tried that for vartical align but it doesn't work */
+    width: 50px; /*  #dispaly of types flex i think baseline is more efficient than width*/
+    height: 50px;
+    flex-shrink: 1;/*# if items get smaller we can set shrink to false    because shrink  take the over flow  amount  then divide the amount  of overflow by number of items in the main axis : which flex-shrink value it's equall to one   which is nine now  and that give us 5.55 px per unit then take the original width of this items then we gonna subtract of 5.55px from width of each of them    */
+    /* even with shrink we have max over flow amount after this items it cannot be reducing their width because also each element have a minimum  space should be cover and it cannot locate  space that less then its min */
+    background-color: #005922;
+    font-weight: bold;
+    border: 1px solid white;
+    text-align: center;
+    line-height: 80%;
+    color: wheat;
+
+}
+
+/* #kirmizi
+{
+    background-color:red ;
+    align-self: flex-end;
+} */
+

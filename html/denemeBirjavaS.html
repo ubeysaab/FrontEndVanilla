@@ -1,0 +1,26 @@
+<!DOCTYPE html> 
+<html>
+  <head>
+<!-- in javascript it should be an quotations in function parameters for strings  -->
+  </head>
+  <body>
+     <img src="https://iheartcraftythings.com/wp-content/uploads/2021/04/Hand-DRAWING-%E2%80%93-STEP-9.jpg" alt="ubey" id="alo" width="100"height="180">
+     <button onclick="changeImg('ciwan' )">ciwan</button> 
+     
+
+     <script>
+      function changeImg(name){
+        let img;
+        if (name=='ciwan'){
+          img="https://i1.sndcdn.com/artworks-000139722661-e8adfn-t500x500.jpg";
+        }
+        else
+        {
+          console.log('fuck you');
+        }
+        document.getElementById("alo").src=img;
+
+      }
+     </script>
+  </body>
+</html>

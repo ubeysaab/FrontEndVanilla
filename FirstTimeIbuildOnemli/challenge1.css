@@ -1,0 +1,130 @@
+/* :root is where you declare and initialize global vars that you can 
+reuse throughout your stylesheet */ 
+/*TODO: ILK OLARAK BOTTOM CONRAINER GRADIENT DIYE BIR SEY VAR HALA GORMEDIM AMA ONUNLA YAPMAYA CALIS */
+:root{
+  --primary-colorC:rgb(59, 143, 166);
+  --secone-colorBY:hsl(71,73%,53%);
+  --third-colorGR:hsl(204,54%, 93%);
+  --fourth-colorGRB:rgb(43, 153, 160);
+/* TODO: MAKE THIS PROJECT MOBIL RESPONSIVE */
+}
+body{
+  padding:20px;
+}
+
+/* to remove a distance between a momcontiner and others  */
+h2,h4,p{
+  margin:0;
+}
+
+html{
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: 'karla',sans-serif;
+}
+*,*::after,*::before{
+  box-sizing: inherit;
+}
+
+.bigContainer{
+  width: 90vw;
+  height:400px;
+  
+  /* border :1px solid red; */
+  border-radius:5px ;/*we noticed after adding radius that smaller div break out of the big container and still square */
+ /* the solution is use over flow : that till  take this smaller square container those are breaking out of the main container we  wantto say to the main container css style if U have anything that's breaking out  of your borders just hide it */
+  overflow: hidden;
+  box-shadow: 3px 0 3px 1px var(--third-colorGR);
+
+}
+.box1{
+  width:100%;
+  height: 45%;
+  /* border: 1px solid black;   */
+  background-color: rgb(253, 253, 253);
+  padding:20px;
+}
+
+.box1 h2{
+  color: var(--primary-colorC);
+  margin-bottom: 20px;
+  
+
+
+}
+.box1 h4{
+  color: var(--secone-colorBY);
+  margin-bottom: 20px;
+
+ 
+}
+
+.box1 p{
+color: var(--fourth-colorGRB);
+}
+
+
+
+/* BUTTON CONTANER  */
+.bottomContainer{
+  width:100%;
+  height: 55%;
+  display: flex;
+
+}
+.box2,.box3{
+  width: 50%;
+  height: 100%;
+  /* border: 1px solid black; */
+  padding:20px;
+  color:rgb(231, 224, 222)
+  
+}
+.box2{
+  background-color: var(--fourth-colorGRB);
+}
+.box2 h4{
+  margin-bottom: 15px;
+}
+
+
+.box3{
+  background-color: var(--primary-colorC);
+  /* border: 2px solid black; */
+}
+#list{
+  /* when we click inspect and looking for lists we will notice  there is some padding and margin  around list by default 
+  the margin is ok but what will bother us is green little box on the left side of all  which is the padding    "this padding is added to list  because generally we want this liets to kinda be indented from the main text so that's  what would we want but here we don't want that   */
+  list-style: none;
+  padding:0;
+}
+button{
+  color: white;
+  background-color: var(--secone-colorBY);
+  border:none;/*this weill maek button look better */
+  padding: 10px;
+  width:100%;
+  margin-top: 30px;
+  border-radius: 5px;
+}
+button:hover{
+  box-shadow: 0px 50px 50px 0px whitesmoke; /* offset-x | offset-y | blur-radius | spread-radius | color */
+  cursor:pointer;
+  transform:scale(0.9) ;
+}
+#pricesContainer{
+  margin-bottom: 10px;
+}
+#price{
+  font-size: 700;
+  display: inline-block;
+}
+#price-right{
+  display: inline-block;
+  color : rgba(255,255,255,0.6);
+  position: relative;
+  top:-2px;
+  margin-left: 5px;
+  font-size: 0.9rem;
+}
+
