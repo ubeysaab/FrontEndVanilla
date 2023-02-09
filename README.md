@@ -66,7 +66,7 @@ responsibly
 > the text in our website should be generally less then 700 px   it needs to be in the middle of 
   the screen  it should be narrow  enough to your eyes to not 
   basically move  great distances to read it  that one piece of it 
-  
+  we just saw in the responsive design  that text and otherthings shouldn't be have a great distance between each other and in generl should be at max 700 px
   
   
 the navbar is very spaced out  there is couple issue gonna on with this badWebSite example 
@@ -168,12 +168,26 @@ this what we gonna through  when we lookin to our design
  6.general usability : just get friend some one who  give us honest feedBack  have them play around with your webpage on multiple devices  
 
 
+## Css Important Notes (mobile&desktop )first responsive Design 
+1. css is read from top to bottom so we should be aware order of our property   
+2. our media query should be at the bottom  of css style sheet  and if we use 
+    1. mobile first approach whih using min width   then we need the greatest width  to be at the bottom  smallest to largest from top to bottom 
+    2. if we desktop first approach which is ***not recommend***  but is use max with and the smaller  width at the bottom  largest to smallest from the top to bottom  
+3. the only thing you have to alter between breakpoints is gonna be layout-related properties 
+
+>    in general we can find that the consensus   among the development comunity  
+     is to use a mobile first  approach and the reason  behind it is you're  getting 
+     to more complex design  and  it's just easier to  the natural flow of html on the mobile
+      devices so no media queries required and then tweak  it as you get larger
+    and in many cases the disktop first approach its not gonna look  very good on mobile devices
+    but inverse of that the mobile first design  it will probably look
+  okay  on the desktop device with out any modifications  so in summary you gonna write less code on most cases */
 
 
 
 
 
-
+when we click inspect and looking for lists we will notice  there is some padding and margin  around list by default
 
 
 
