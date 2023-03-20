@@ -2,7 +2,10 @@
 
 name convention in css gonna be kebab case it's the best practice 
 we add a space after "property:" value;
+
 we add a space before  {} when we creat a new selector 
+spaces between clases slectors in css should be the same all time 
+the paranthesis should be on the same line with  the selsctor 
 
 > depending on you one property's value we have different rules of css
 
