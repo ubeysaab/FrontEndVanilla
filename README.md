@@ -1,14 +1,27 @@
 # very Important Notes every FrontEnd Dev will need 
 
-
+name convention in css gonna be kebab case it's the best practice 
+we add a space after "property:" value;
+we add a space before  {} when we creat a new selector 
 
 > depending on you one property's value we have different rules of css
+
+border , margin and padding : we with clock way {top , right , bottom , left } if you don't write all sides each side will take the value of the side that parallel to it 
+
+
+in back-ground image cover the image will cover the div but will stretch but with contain the div will contain the image that mean image will fully appear 
+
 
 ## display:
 block : it's gonna take all the space of its container it's gonna take a height of the content within it and gonna break to a new  line in respect its width and height properties  
 inline :  is going to just be the width and height  of the content within it it's  not gonna break to a new line  and it's also not gonna to respect the width and height properties  if we try to set them ]  
-inline-block : kind of adopt sa couple attributes of both so main different  if we change inline to inline block it's go respect the geight and width properties \(| its taking all the properties of inlie but instead of ignoring  width and height its now respect thse properties  )  
+inline-block : kind of adopt sa couple attributes of both so main different  if we change inline to inline block it's go respect the geight and width properties \(| its taking all the properties of inlie but instead of ignoring  width and height its now respect thse properties  )   
+there is Screen shot from zero course please add it here ubey 
 
+---
+css visiblility: hidden and display: none:
+display none : we remove it from the work flow (used with the tall listes need to bee removed from work space then when click some thing it'll appear)
+visiblity : hidden we remove it but  keep it's place  in the work flow ;
 ---
 ## boxModel :keep on the top of your mind 
  :first off the box model describes how much space an html element occupies 
@@ -26,7 +39,7 @@ margin soesn't play into the total space it occupies but it does control  the sp
 
 
 
-margin doesn't do any thing when display is inline
+margin doesn't do any thing[just top and bottom ] when display is inline
 ---
 ## POSITION PROPERTY :::::
 
