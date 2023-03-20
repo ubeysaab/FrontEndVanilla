@@ -7,6 +7,8 @@ we add a space before  {} when we creat a new selector
 spaces between clases slectors in css should be the same all time 
 the paranthesis should be on the same line with  the selsctor 
 
+Grouping multiple selector that have shared value is very important thing for writing a clean code (we can do it use .class, .class, .class {}  or by creating a shared class and it for all of them)
+
 > depending on you one property's value we have different rules of css
 
 border , margin and padding : we with clock way {top , right , bottom , left } if you don't write all sides each side will take the value of the side that parallel to it 
