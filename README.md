@@ -28,6 +28,9 @@ css visiblility: hidden and display: none:
 display none : we remove it from the work flow (used with the tall listes need to bee removed from work space then when click some thing it'll appear)
 visiblity : hidden we remove it but  keep it's place  in the work flow ;
 ---
+what is the importance of nesting prevent overwriting between classes 
+
+---
 ## boxModel :keep on the top of your mind 
  :first off the box model describes how much space an html element occupies 
  the space is heavily influenced by that  box sizing property that  we just talked about whether that's contentBox or borderBox 
