@@ -1,3 +1,4 @@
+#these notes are not finished yet you can read them like it is now or you can contribute and manipulate them
 # very Important Notes every FrontEnd Dev will need 
 
 name convention in css gonna be kebab case it's the best practice 
