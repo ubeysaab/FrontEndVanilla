@@ -14,6 +14,11 @@ Grouping multiple selector that have shared value is very important thing for wr
 
 border , margin and padding : we with clock way {top , right , bottom , left } if you don't write all sides each side will take the value of the side that parallel to it 
 
+First, remember that margins should preferably be used to increase the distance between sibling elements, not to create spacing between a child and a parent. 
+
+
+
+
 
 in back-ground image cover the image will cover the div but will stretch but with contain the div will contain the image that mean image will fully appear 
 
